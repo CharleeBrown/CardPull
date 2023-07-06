@@ -32,3 +32,7 @@ function pickAcard(){
             });
     
 }
+
+function PullNewDeck(){
+	location.reload();
+}
