@@ -7,36 +7,40 @@
 </head>
 
 <body>
-    <div class="container">
         <div class="jumbotron" id="pictureHold">
-          <div class="row text-center">
-            <div class="col-sm-1">
-                <img class="cardSet" id="cardOne" height="200" width="120"/>
-                  <p class="cardInfo" id="cardOneVal"></p>
+          <div class="row offset-2 text-center">
+            <div class="col-md-2">
+                <img class="cardSet" id="cardOne" height="200" width="150"/>
+                  <p class="cardInfo" id="cardOneVal"><span class="cardVal"></span></p>
             </div>
 
-            <div class="col-sm-1">
-                <img class="cardSet" id="cardTwo" height="200" width="120"/>
-                  <p class="cardInfo" id="cardTwoVal"></p>
+            <div class="col-md-2">
+                <img class="cardSet" id="cardTwo" height="200" width="150"/>
+                  <p class="cardInfo" id="cardTwoVal"><span class="cardVal"></span></p>
             </div>
 
-            <div class="col-sm-1">
-                <img class="cardSet" id="cardThree" height="200" width="120"/>
-                  <p class="cardInfo" id="cardThreeVal"></p>
+            <div class="col-md-2">
+                <img class="cardSet" id="cardThree" height="200" width="150"/>
+                  <p class="cardInfo" id="cardThreeVal"><span class="cardVal"></span></p>
             </div>
 
-            <div class="col-sm-1">
-                <img class="cardSet" id="cardFour" height="200" width="120"/>
-                  <p class="cardInfo" id="cardFourVal"></p>
+            <div class="col-md-2">
+                <img class="cardSet" id="cardFour" height="200" width="150"/>
+                  <p class="cardInfo" id="cardFourVal"> <span class="cardVal"></span></p>
             </div>
 
-            <div class="col-sm-1">
-                <img class="cardSet" id="cardFive" height="200" width="120"/>
-                  <p class="cardInfo" id="cardFiveVal"></p>
+            <div class="col-md-2">
+                <img class="cardSet" id="cardFive" height="200" width="150"/>
+                  <p class="cardInfo" id="cardFiveVal"><span class="cardVal"></span></p>
             </div>
           </div>
-</div>
-<button id="cardPick" onclick="pickAcard()">New Card</button><button onclick="newDeck()">New Deck</button>
+          <div class="row text-center">
+            <div class="col-6 offset-3">
+              <button class="btn btn-primary" style="width: 25%;" onclick="pickAcard()">New Card</button>
+              <button class="btn btn-primary" onclick="PullNewDeck()">New Deck</button>
+              <p> Total Value <span id="mainVal"></span></p>
+            </div>
+          </div>
 </div>
 </body>
 <script src="./javascripts/main.js"></script>

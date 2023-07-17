@@ -10,12 +10,17 @@ a {
 #cardPick{
   margin-right:30px;
 }
-
-
+.jumbotron {
+  margin: 0 auto;
+}
 .cardSet{
   display:inline-block;
 }
 
 .container{
   display:inline;
+}
+
+img{
+visibility: hidden;
 }
