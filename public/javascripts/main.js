@@ -71,5 +71,22 @@ function pickAcard() {
 
 
 function PullNewDeck() {
-    location.reload();
+    //location.reload();
+    var cards = document.getElementsByClassName("cardSet");
+    var info = document.getElementsByClassName("cardInfo");
+    var getVal = document.getElementById("mainVal");
+    var getTotal = document.getElementById("cardsLeft");
+        // Clear existing images and text content
+        for (let i = 0; i < 5; i++) {
+            cards[i].style.visibility = "hidden";
+            cards[i].removeAttribute("src");
+            info[i].textContent = "";
+        }
+        newDeck().then(val => {
+            mainID = val
+        }
+        )
+
+        getVal.textContent = "";
+        getTotal.textContent="";
 }
