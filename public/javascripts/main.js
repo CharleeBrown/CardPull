@@ -1,7 +1,7 @@
 var x = 3;
 var mainID = "";
 var totalVal = 0;
-
+var cardsAvailable = 0;
 newDeck().then(val => {
     mainID = val
 }
@@ -31,9 +31,10 @@ function pickAcard() {
         var tests = document.getElementsByClassName("cardSet");
         var names = document.getElementsByClassName("cardInfo");
         var setVal = document.getElementById("mainVal");
+        var getAmt = document.getElementById("cardsLeft");
 
         let totalVal = 0;
-        
+
         const valueMap = {
             "JACK": 10,
             "KING": 10,
@@ -56,8 +57,10 @@ function pickAcard() {
             tests[i].style.visibility = "visible";
             totalVal += valueMap[card.value] || parseInt(card.value);
         }
-
-        console.log(totalVal);
+        cardsAvailable = cardValue.remaining;
+        console.log(cardsAvailable);
+        getAmt.textContent = cardsAvailable;
+        //console.log(totalVal);
         setVal.textContent = totalVal;
         //imgID.src = cardValue[2];
         //cards.innerText = cardValue[0] + " of " + cardValue[1];
