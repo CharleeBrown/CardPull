@@ -10,3 +10,12 @@ a {
 #cardPick{
   margin-right:30px;
 }
+
+
+.cardSet{
+  display:inline-block;
+}
+
+.container{
+  display:inline;
+}
