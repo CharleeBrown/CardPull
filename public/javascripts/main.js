@@ -25,6 +25,7 @@ function getACard(deck) {
             return data;
         });
 }
+
 function pickAcard() {
     var cards = document.getElementById("cardValue");
     getACard(mainID).then(cardValue => {
@@ -57,6 +58,7 @@ function pickAcard() {
             tests[i].style.visibility = "visible";
             totalVal += valueMap[card.value] || parseInt(card.value);
         }
+
         cardsAvailable = cardValue.remaining;
         console.log(cardsAvailable);
         getAmt.textContent = cardsAvailable;
